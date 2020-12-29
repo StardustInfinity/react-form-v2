@@ -14,6 +14,7 @@ npm install --save @twinkledas/react-form-v2
 ## Storybook
 To check the components, run 
 ```bash
+npx sb init
 npm run storybook
 ```
 

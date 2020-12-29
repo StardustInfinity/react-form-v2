@@ -1,4 +1,6 @@
-# @twinkledas/react-form
+# @twinkledas/react-form-v2
+This is a react-form library.
+
 
 > Made with create-react-library
 
@@ -7,22 +9,52 @@
 ## Install
 
 ```bash
-npm install --save @twinkledas/react-form
+npm install --save @twinkledas/react-form-v2
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from '@twinkledas/react-form'
+import { ReactForm, Field, Select } from '@twinkledas/react-form'
 import '@twinkledas/react-form/dist/index.css'
 
-class Example extends Component {
+const emailRegex = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?"
+
+function someCustomValidation(value) {
+  console.log('some custom validation')
+  console.log(value)
+  return false;
+}
+
+class App extends React.Component {
+  handleFormSubmit(values) {
+    // Make an API call
+    
+    console.log(values)
+  }
   render() {
-    return <MyComponent />
+    return (
+      <div className="App">
+        <ReactForm onSubmit={this.handleFormSubmit}>
+          <Field 
+            type="text" 
+            name="email" 
+            // customValidation={someCustomValidation} 
+            pattern={emailRegex} 
+          />
+          <Field type="text" name="phoneNumber" />
+          <Select options={["orange", "apple", "banana"]} name="fruit" />
+          <button type="submit">Submit</button>
+        </ReactForm>
+      </div>
+    );
   }
 }
+
+export default App
+
 ```
 
 ## License

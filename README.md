@@ -1,7 +1,6 @@
 # @twinkledas/react-form-v2
 This is a react-form library.
 
-
 > Made with create-react-library
 
 [![NPM](https://img.shields.io/npm/v/@twinkledas/react-form.svg)](https://www.npmjs.com/package/@twinkledas/react-form) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
@@ -11,6 +10,21 @@ This is a react-form library.
 ```bash
 npm install --save @twinkledas/react-form-v2
 ```
+
+## Storybook
+To check the components, run 
+```bash
+npm run storybook
+```
+
+To see the example of working app,
+```
+cd example
+npm i
+npm run start
+```
+### File Entry Point
+https://github.com/StardustInfinity/react-form-v2/blob/master/src/index.js
 
 ## Usage
 

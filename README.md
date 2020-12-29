@@ -23,6 +23,8 @@ cd example
 npm i
 npm run start
 ```
+### File Entry Point
+https://github.com/StardustInfinity/react-form-v2/blob/master/src/index.js
 
 ## Usage
 

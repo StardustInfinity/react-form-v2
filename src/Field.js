@@ -1,4 +1,6 @@
 import React from 'react';
+import styles from './styles.module.css'
+
 
 export default class Field extends React.Component {
     constructor(props) {
@@ -30,18 +32,21 @@ export default class Field extends React.Component {
     }
     
     render() {
-        const { type, name, handleOnInputBlur, customValidation, pattern } = this.props;
+        const { title, type, name, handleOnInputBlur, customValidation, pattern, placeholder } = this.props;
         
         return (
             <div>
+                <label>{title}</label>
                 <input 
                     name={name} 
                     type={type} 
                     onChange={(e) => this.onInputChange(e, customValidation, pattern)} 
                     onBlur={handleOnInputBlur}
                     pattern={pattern}
+                    placeholder={placeholder}
+                    required
                 />
-                {this.state.error ? <div>Some error message</div> : null }
+                {this.state.error ? <div className={styles.errormsg}> * Please enter valid input</div> : null }
             </div>
         )
     }

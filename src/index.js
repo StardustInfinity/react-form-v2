@@ -12,6 +12,7 @@ class ReactForm extends React.Component {
         super(props);
 
         this.state = {
+            userName: '',
             email: '',
             phoneNumber: '',
         }
@@ -53,7 +54,7 @@ class ReactForm extends React.Component {
             return child;
         });
         return (
-            <form onSubmit={this.handleFormSubmit}>
+            <form className={styles.formcontainer} onSubmit={this.handleFormSubmit}>
                 {childrenWithProps}
             </form>
         )

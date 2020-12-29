@@ -7,3 +7,18 @@
   font-size: 2em;
   text-align: center;
 }
+
+.errormsg{
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+}
+
+.formcontainer{
+  padding: 10px;
+  margin: 10px;
+}
+
+.formcontainer > div {
+  margin: 10px;
+}

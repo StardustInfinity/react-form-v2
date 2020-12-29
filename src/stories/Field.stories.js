@@ -16,6 +16,7 @@ Text.args = {
 
 export const Number = Template.bind({});
 Number.args = {
+  name: 'phoneNumber',
   type: 'number'
 };
 

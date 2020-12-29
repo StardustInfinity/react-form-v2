@@ -52,14 +52,31 @@ class App extends React.Component {
     return (
       <div className="App">
         <ReactForm onSubmit={this.handleFormSubmit}>
+        <Field 
+            title="Name: "
+            type="text" 
+            name="userName" 
+            placeholder="Enter Full Name"
+          />
           <Field 
+            title="Email: "
             type="text" 
             name="email" 
             // customValidation={someCustomValidation} 
-            pattern={emailRegex} 
+            pattern={emailRegex}
+            placeholder="user@example.com"
           />
-          <Field type="text" name="phoneNumber" />
-          <Select options={["orange", "apple", "banana"]} name="fruit" />
+          <Field
+            title="Phone Number: "
+            type="number" 
+            name="phoneNumber"
+            placeholder="Enter 10-digit number"
+            />
+          <Select 
+            title="Hobby: "
+            options={["Painting", "Traveling", "Singing"]} 
+            name="hobby"
+            />
           <button type="submit">Submit</button>
         </ReactForm>
       </div>
@@ -68,6 +85,7 @@ class App extends React.Component {
 }
 
 export default App
+
 
 ```
 

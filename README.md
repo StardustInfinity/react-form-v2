@@ -53,7 +53,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <ReactForm onSubmit={this.handleFormSubmit}>
-        <Field 
+          <Field 
             title="Name: "
             type="text" 
             name="userName" 
